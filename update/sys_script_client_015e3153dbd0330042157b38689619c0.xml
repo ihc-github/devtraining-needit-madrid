@@ -19,18 +19,18 @@
 	}
 	
 	
-    /*	
+	/*
 	// zawsze zadziała - podczas łądowania strony newValue = ''
 	if (isLoading || newValue === '') {
 		alert(" isLoading || newValue === '' ");
 		return;
 	}
-	*/
+ 	*/
 	
 	//Type appropriate comment here, and begin script below
 	
 	var whatneeded = g_form.getValue('u_what_needed');  // Human Resources, Facilities, Legal, Other
-	var old_request_type = g_form.getValue('u_request_type');   
+	var old_request_type = g_form.getValue('u_request_type');
 	
 	// Clear all of the choices from the What needed field choice list
 	g_form.clearOptions('u_what_needed');
@@ -76,6 +76,7 @@
 	
 	// powrót do domyślnej wartości gdy nie nowy rekord i użytkownik przeklika request_type i powróci do wartości z chwili otwarcia formularza
 	if (!g_form.isNewRecord()){
+		jslog("!!!onChange  The value of old_request_type = " + old_request_type);
 		
 	}
 	
@@ -88,7 +89,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>015e3153dbd0330042157b38689619c0</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>NeedIt Request Type Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -96,7 +97,7 @@
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_client_015e3153dbd0330042157b38689619c0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-03-25 14:45:21</sys_updated_on>
+        <sys_updated_on>2019-03-28 15:21:07</sys_updated_on>
         <table>x_58872_needit_needit</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
